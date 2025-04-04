@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import django_mongodb_backend
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+connection_string = os.getenv("MONGO_URI")
+
 
 from pathlib import Path
 
@@ -77,7 +83,7 @@ WSGI_APPLICATION = 'finder.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": django_mongodb_backend.parse_uri("mongodb+srv://mongodb:mongodb@cluster0.ytyyt.mongodb.net/dublinfinder?retryWrites=true&w=majority&appName=Cluster0"),
+    "default": django_mongodb_backend.parse_uri(connection_string),
 }
 
 # Password validation
