@@ -1,3 +1,17 @@
+# Run this project
+Run this project by running the `requirements.txt` folder:
+```python
+pip install -r requirements.txt
+```
+Please make sure you have the proper environment variables in place, you will need a MongoDB connection string and a Voyage AI API Key. 
+
+To run the Dublin City Center Pub Finder please make sure you're in the correct folder in your directory and run this command:
+```python
+python manage.py runserver
+```
+
+
+
 # Django MongoDB Backend - Project Template
 
 This is a Django project starter template for the Django MongoDB Backend.
